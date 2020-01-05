@@ -1,0 +1,474 @@
+/* 
+sidebar color: rgb(32, 36, 36)
+content color:  #f0163a
+*/
+/* start container */
+.container{
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows:  repeat(4,1fr);
+    grid-template-areas: 
+                         "sidebar main-content"
+                         "sidebar main-content"
+                         "sidebar main-content"
+                         "sidebar main-content";
+    border: 2px solid #f0163a;
+}
+/* end container */
+
+/* start sidebar */
+.sidebar{
+    grid-area:sidebar ;
+    background-color: rgb(32, 36, 36);
+    border: 2px solid rgb(32, 36, 36);
+}
+.sidebar .s-item1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: center;
+    margin: 30px auto;
+}
+.sidebar .s-item2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.sidebar .s-item3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+.sidebar .s-item4 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}  
+  /****** start s-item1 *******/
+.sidebar .s-item1 img {
+    height:70%;
+    width:70% ;
+    border: 2px solid #f0163a;
+    border-radius: 35px;
+    
+}
+/****** end s-item1 *******/
+/****** start s-item2 *******/
+.sidebar .s-item2{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar .s-item2 h2,
+.sidebar .s-item3 h2,
+.sidebar .s-item4 h2{
+    color: white;
+    font-size: 25px;
+    margin:30px 0px 30px 10%; 
+}
+.sidebar .s-item2 ul,
+.sidebar .s-item3 ul,
+.sidebar .s-item4 ul {
+    margin:30px 0px;  
+    color: white;
+}
+.sidebar .s-item2 ul li
+{
+    padding:6px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    display: flex; 
+}
+.sidebar .s-item2 ul .balls
+{
+    margin-left: auto; 
+}
+.sidebar .s-item2 ul .balls > div,
+.main-content .m-item4 ul .balls > div{
+    display: inline-block; 
+    width: 20px;
+    height: 20px;
+    background-color: #f0163a;
+    border-radius: 50%;
+    margin-right:13px;
+
+}
+.sidebar .s-item2 ul .balls .w-ball{
+    background-color: white;
+}
+/****** end s-item2 *******/
+/****** start s-item3 *******/
+.sidebar .s-item3 ul li,
+.sidebar .s-item4 ul li{
+    padding:6px;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+/****** end s-item3 *******/
+
+/* end sidebar */
+
+/* start main-content */
+.main-content{
+    grid-area: main-content;
+    background-color: white;
+    border: 2px solid white;
+}
+.main-content .m-item1{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.main-content .m-item2{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.main-content .m-item3{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.main-content .m-item4{
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+/* end main-content */
+.main-content .m-item1 h1{
+    background-color:rgb(32, 36, 36);
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    width:50%;
+    margin: auto;
+    margin-bottom: 30px;
+    border: 1px solid rgb(32, 36, 36);
+    border-radius: 15px;
+    letter-spacing: 2px;
+    margin-top: -2px;
+}
+.main-content .m-item1 .div-i{
+ width:60% ;
+ padding: 20px;
+ margin: auto;
+ margin-bottom: 20px;
+ text-align:left;
+}
+.main-content .m-item1 i{
+    font-size:35px;
+    color: #f0163a;
+    padding: 10px;
+}
+.main-content .m-item1 span {
+    font-size: 22px;
+    font-weight: 500px;
+    padding: 10px;
+}
+.main-content .m-item1 p{
+    background-color:#f0163a ;
+    color: white;
+    padding: 30px;
+    font-size: 25px;
+    width:80%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 60px;
+    line-height: 1.3em;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+hr{
+    width: 50%;
+    margin: 100px auto;
+    background-color: rgb(32, 36, 36);
+    height:3px ;
+}
+
+.main-content .m-item2 h2,
+.main-content .m-item3 h2,
+.main-content .m-item4 h2{
+    background-color:#f0163a ;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    width:60%;
+    margin-left: 8%;
+    margin-bottom:40px ;
+   /* border-top-right-radius: 20px ;
+    border-bottom-right-radius: 20px; */
+    border-radius: 20px;
+    margin-top: 40px;
+}
+/*
+.main-content .m-item2 span:first-of-type{
+    background-color:#f0163a ;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    width:15%;
+    margin-left: 8%;
+    margin-top:20px ;
+    border-radius: 10px;
+}
+.main-content .m-item2 span:last-of-type{
+    padding: 10px;
+    font-size:20px ;
+    display: inline-block;
+}
+*/
+.main-content .m-item3 ul li,
+.main-content .m-item2 ul li,
+.main-content .m-item4 ul li{
+  margin:15px;
+  margin-left: 8%;
+  font-size: 20px;
+  font-weight: 400px;
+}
+.main-content .m-item4 ul .balls{
+    display: inline-block;
+    position: relative;
+    left: 10%;
+}
+.main-content .m-item4 ul .balls .black{
+    background-color:rgb(32, 36, 36); ;
+}
+
+
+/************************** @media ********************************/
+
+
+@media (min-width:1015px){
+    /* start @media sidebar */
+    .sidebar .s-item2 h2,
+    .sidebar .s-item3 h2,
+    .sidebar .s-item4 h2{
+        font-size: 30px;
+        margin:10px 0px 10px 5%
+    }
+    .sidebar .s-item2 ul,
+    .sidebar .s-item3 ul,
+    .sidebar .s-item4 ul {
+        margin:20px 0px;  
+    }
+    .sidebar .s-item2 ul li
+    {
+        padding:10px;
+        letter-spacing: 0px;
+        font-size: 20px;
+        display: flex; 
+        margin-left: -25px;
+    }
+    
+    .sidebar .s-item2 ul .balls > div,
+    .main-content .m-item4 ul .balls > div{
+        width: 19px;
+        height: 19px;
+        margin-right:6px;
+    }
+    .main-content .m-item4 ul .balls{
+        display: inline-block;
+        position: relative;
+        left: 4%;
+    }
+    /* end @media sidebar */
+
+
+    
+}
+@media (max-width:1014px){
+    .sidebar .s-item2 h2,
+    .sidebar .s-item3 h2,
+    .sidebar .s-item4 h2{
+        font-size: 30px;
+        margin:10px 0px 10px 5%
+    }
+    .sidebar .s-item2 ul,
+    .sidebar .s-item3 ul,
+    .sidebar .s-item4 ul {
+        margin:15px 0px;  
+    }
+    .sidebar .s-item2 ul li
+    {
+        padding:10px;
+        letter-spacing: 0px;
+        font-size: 15px;
+        display: flex; 
+        margin-left: -30px;
+    }
+    
+    .sidebar .s-item2 ul .balls > div,
+    .main-content .m-item4 ul .balls > div{
+        width: 10px;
+        height: 10px;
+        margin-right:5px;
+    }
+    /* start @media main-content */
+    .main-content .m-item1 h1{
+        font-size: 22px;
+        font-weight: 200px;
+    }
+    .main-content .m-item1 .div-i{
+        width:100%;
+        padding: 15px;
+        margin: auto;
+        margin-bottom: 20px;
+        text-align:left;
+       }
+    .main-content .m-item1 i{
+        font-size:20px;
+       color: #f0163a;
+        padding: 7px;
+    }
+    .main-content .m-item1 span{
+        font-size: 15px;
+        font-weight: 300px;
+        padding: 10px;
+    }
+    .main-content .m-item1 p{
+        padding: 15px;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    hr{
+        margin: 50px auto;
+    }
+    .main-content .m-item2 h2,
+    .main-content .m-item3 h2,
+    .main-content .m-item4 h2{
+        padding: 17px;
+        font-size: 15px;
+        width:65%;
+        margin-left: 8%;
+        margin-bottom:40px ;
+        border-radius: 20px;
+        margin-top: 40px;
+}
+    .main-content .m-item3 ul li,
+    .main-content .m-item2 ul li,
+    .main-content .m-item4 ul li{
+        margin:7px 2px;
+        margin-left: 2%;
+        font-size: 12px;
+        font-weight: 350px;
+    }
+    .sidebar .s-item2 ul .balls > div,
+    .main-content .m-item4 ul .balls > div{
+        display: inline-block; 
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin-right:4px;
+
+    }
+    /* end @media main-content */
+    
+}
+@media (max-width:768px){
+    .sidebar .s-item2 h2,
+    .sidebar .s-item3 h2,
+    .sidebar .s-item4 h2{
+        font-size: 22px;
+        margin:10px 0px 10px 5%
+    }
+    .sidebar .s-item2 ul,
+    .sidebar .s-item3 ul,
+    .sidebar .s-item4 ul {
+        margin:15px 0px;  
+    }
+    .sidebar .s-item2 ul li
+    {
+        padding:10px;
+        letter-spacing: 0px;
+        font-size: 12px;
+        display: flex; 
+        margin-left: -40px;
+    }
+    
+    .sidebar .s-item2 ul .balls > div,
+    .main-content .m-item4 ul .balls > div{
+        width: 10px;
+        height: 10px;
+        margin-right:3px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:597px){
+    .sidebar .s-item2 h2,
+    .sidebar .s-item3 h2,
+    .sidebar .s-item4 h2{
+        font-size: 20px;
+        margin:10px 0px 10px 5%
+    }
+    .sidebar .s-item2 ul,
+    .sidebar .s-item3 ul,
+    .sidebar .s-item4 ul {
+        margin:20px 0px;  
+    }
+    .sidebar .s-item2 ul li
+    {
+        padding:10px;
+        letter-spacing: 0px;
+        font-size: 12px;
+        display: flex; 
+        margin-left: -44px;
+    }
+    .main-content .m-item4 ul .balls{
+        display: inline-block;
+        position: relative;
+        left: 3%;
+    }
+    .sidebar .s-item2 ul .balls > div,
+    .main-content .m-item4 ul .balls > div{
+        width: 9px;
+        height: 9px;
+        margin-right:1px;
+    }
+    .sidebar a {
+        font-size: 16px;
+    }
+
+} 
+
+@media (max-width:500px){
+    /* start @media sidebar */
+    .main-content .m-item3 ul li,
+    .main-content .m-item2 ul li,
+    .main-content .m-item4 ul li{
+        margin:6px 2px;
+        margin-left: 2%;
+        font-size: 10px;
+        letter-spacing: 0px;
+        font-weight: 350px;
+    }
+    /* end @media sidebar */
+    /* start @media main-content */
+    .main-content .m-item1 h1{
+        font-weight: 100px;
+        padding: 20px 30px;
+        letter-spacing: 0px;
+        text-align: center;
+        width: 50%;
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+    .main-content .m-item1 i{
+        font-size:15px;
+       color: #f0163a;
+        padding: 5px;
+    }
+    .main-content .m-item1 span{
+        font-size: 15px;
+        font-weight: 250px;
+        padding: 8px;
+    }
+    .main-content .m-item1 p{
+        padding: 13px 15px;
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+    .main-content .m-item2 h2,
+    .main-content .m-item3 h2,
+    .main-content .m-item4 h2{
+        margin-bottom: 20px;
+    }
+    .sidebar a {
+        font-size: 14px;
+    }
+    /* end @media main-content */
+} 
